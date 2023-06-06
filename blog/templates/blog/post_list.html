@@ -1,23 +1,108 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Django Girls blog</title>
-    </head>
-    <body>
-        <header>
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </header>
 
-        <article>
-            <time>published: 14.06.2014, 12:14</time>
-            <h2><a href="">My first post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        </article>
+<head>
+    <title>Web Dev Notes</title>
+</head>
 
-        <article>
-            <time>published: 14.06.2014, 12:14</time>
-            <h2><a href="">My second post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-        </article>
-    </body>
+<body>
+    <header>
+        <h1><a href="https://github.com/ysfnxt">Yusuf's Django Blog</a></h1>
+    </header>
+
+    <article>
+        <h4><time>Published: 06-06-2023</time></h4>
+        <h2><a href="https://docs.djangoproject.com">About Django</a></h2>
+        <p>
+            Django is a high-level Python web framework that encourages rapid
+            development and clean, pragmatic design. <br />
+            Built by experienced developers, it takes care of much of the hassle of
+            web development, so you can focus on <br />
+            writing your app without needing to reinvent the wheel. It’s free and
+            open source.
+        </p>
+
+        <b>Reasons to use Django</b>
+        <p>
+            <li>
+                <ul>
+                    Ridiculously fast.
+                </ul>
+                <ul>
+                    Reassuringly secure.
+                </ul>
+                <ul>
+                    Exceedingly scalable.
+                </ul>
+            </li>
+        </p>
+
+        <b>What does Django code look like?</b>
+        <p>
+            In a traditional data-driven website, a web application waits for HTTP
+            requests from the web browser (or other client). <br />
+            When a request is received the application works out what is needed
+            based on the URL and possibly information in POST <br />
+            data or GET data. Depending on what is required it may then read or
+            write information from a database or perform other <br />
+            tasks required to satisfy the request. The application will then return
+            a response to the web browser, often dynamically <br />
+            creating an HTML page for the browser to display by inserting the
+            retrieved data into placeholders in an HTML template.
+            <br>
+            <br>
+            <img src="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Introduction/basic-django.png"
+                width="713" height="503" loading="lazy" />
+        </p>
+
+        <br>
+        <b>Django web applications typically group the code that handles each of these steps into separate files:</b>
+        <p>
+            <li>
+                <ul><u>URLs:</u> While it is possible to process requests from every single URL via a single function,
+                    it is much
+                    more maintainable <br>
+                    to write a separate view function to handle each resource. A URL mapper is used to redirect
+                    HTTP requests to the appropriate <br>
+                    view based on the request URL. The URL mapper can also match particular
+                    patterns of strings or digits that appear in a URL <br>
+                    and pass these to a view function as data.</ul>
+
+                <ul><u>View:</u> A view is a request handler function, which receives HTTP requests and returns HTTP
+                    responses.
+                    Views
+                    access the data <br>
+                    needed to satisfy requests via models, and delegate the formatting of the response to
+                    templates. </ul>
+
+                <ul><u>Models:</u> Models are Python objects that define the structure of an application's data, and
+                    provide
+                    mechanisms
+                    to manage <br> (add, modify, delete) and query records in the database.
+                </ul>
+                <ul>
+                    <u>Templates:</u>
+                    A template is a text file defining the structure or layout of a file (such as an HTML page),
+                    with
+                    placeholders used to <br> represent actual content. A view can dynamically create an HTML page using
+                    an HTML
+                    template, populating it with data from <br> a model. A template can be used to define the structure
+                    of any
+                    type
+                    of file; it doesn't have to be HTML!
+
+                </ul>
+            </li>
+        </p>
+        <br>
+        <p> For More information on Django, refer to the <a href="https://docs.djangoproject.com/en/4.2/">docs</a></p>
+
+    </article>
+</body>
+<br>
+
+<footer>
+    <p align="center">&copy Unchained Django dev. 2023.</p>
+</footer>
+
 </html>
